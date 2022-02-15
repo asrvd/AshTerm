@@ -32,14 +32,6 @@ Feel free to add Issues/Pull Requests to the Project.
 ### License ⚖
 MIT License
 
-### Ending Note MIT License
-
-MIT License
-
-MIT License
-
-MIT License
-
 ### Ending Note ✒
 - *Consider giving the repo a ⭐ if you liked the project!*
 - *Follow me and checkout my other projects!*
