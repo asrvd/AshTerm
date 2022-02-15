@@ -52,15 +52,17 @@ export default function Term() {
                                 return 'cannot go up'
                             } else {
                                 setPrompt(prompt.substring(0, prompt.lastIndexOf('/'))+":~$ ")
-                                sethome(prompt.substring(prompt.lastIndexOf('/', prompt.lastIndexOf('/')), prompt.lastIndexOf('/'))+1)
-                                console.log(prompt.substring(prompt.lastIndexOf('/', prompt.lastIndexOf('/')), prompt.lastIndexOf('/'))+1)
+                                sethome(prompt.substring(prompt.lastIndexOf('/', prompt.lastIndexOf('/')-1)+1, prompt.lastIndexOf('/')))
+                                //console.log(prompt.substring(prompt.lastIndexOf('/', prompt.lastIndexOf('/')-1)+1, prompt.lastIndexOf('/')))
+                                //console.log(prompt.lastIndexOf('/', prompt.lastIndexOf('/')-1))
+                                //console.log(prompt.lastIndexOf('/'))
                                 return 'changed directory'
                             }
                         } else {
                             if (dir[home].includes(args[0])) {
                                 setPrompt(`${prompt.slice(0, -4)+ "/" + args.join('/') + ":~$ "}`)
                                 sethome(args.join('/'))
-                                console.log(prompt.slice(0, -4)+ "/" + args.join('/'))
+                                //console.log(prompt.slice(0, -4)+ "/" + args.join('/'))
                                 return 'changed directory'
                             } else {
                                 return 'cannot find directory'
@@ -91,7 +93,7 @@ export default function Term() {
                                 [home]: [...dir[home], args[0]],
                                 [args[0]]:[]
                             })
-                            console.log(dir)
+                            //console.log(dir)
                             return `created directory ${args[0]}.`
                         } else {
                             return 'invalid arguments'
