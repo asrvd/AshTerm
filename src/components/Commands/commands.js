@@ -110,7 +110,7 @@ export default {
             description: "Opens this website's github repository.",
             usage: 'repo',
             fn: () => {
-                window.open("https://github.com/asheeeshh/termport", '_blank')
+                window.open("https://github.com/asheeeshh/AshTerm", '_blank')
                 return "opening repository..."
             }
         },

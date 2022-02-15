@@ -35,8 +35,8 @@ export default function Term() {
                     }
                 },
                 cat: {
-                    description: 'Prints ASCII art',
-                    usage: 'ascii',
+                    description: 'Get a random cute cat~',
+                    usage: 'cat',
                     fn: async () => {
                         const url = await getcat()
                         terminal.current.pushToStdout("getting a cute cat for you..\n---\n")
