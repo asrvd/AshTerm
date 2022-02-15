@@ -1,0 +1,87 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  scroll-behavior: auto;
+}
+
+body {
+  background-image: url(../assets/images/base.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+.App {
+  align-self: center;
+  height: 95vh;
+  padding: 5px;
+  width: 98vw;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 10px;
+  border:1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+pre {
+  color: #8be9fd;
+  padding-left: 20px;
+  font-size: 14px;
+  font-weight: bold;
+  padding-top: 15px;
+}
+
+.head {
+  color:#ff5555;
+  font-weight: normal;
+}
+
+.cat {
+  width: 400px;
+  height: 300px;
+}
+
+.user-input {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: #ffff;
+}
+
+::-webkit-scrollbar {
+  scroll-behavior: auto;
+  width: 8px;
+  height:8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #6272a4;
+  background-clip: content-box;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #bd93f9;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #bd93f9;
+}
+
+.container {
+  width: 98vw;
+  height: 95vh;
+  padding: 10px 30px 10px 10px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 10px;
+  border:1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  border: 1px solid #bd93f9;
+}
