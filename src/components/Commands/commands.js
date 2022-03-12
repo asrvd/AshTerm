@@ -101,8 +101,8 @@ export default {
             fn: () => {
                 return `
                     Editor: Visual Studio Code\n
-                    Theme : Dracula\n
-                    Font  : MonoLisa
+                    Theme : GitHub Default Theme\n
+                    Font  : Consolas
                 `
             }
         },
