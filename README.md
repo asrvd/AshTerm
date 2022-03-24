@@ -13,6 +13,10 @@ Clone the repos's main branch.
 ```sh
 $ git clone -b main https://github.com/asheeeshh/AshTerm.git
 ```
+Change directory.
+```sh
+$ cd Ashterm
+```
 Install dependencies, make sure you have `nodejs` and `npm` installed.
 ```sh
 $ npm install
