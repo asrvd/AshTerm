@@ -58,7 +58,7 @@ export default {
                     hindi            - 100%
                     gen-z-langauge   - 00%
                     python           - 60%
-                    javascript       - 40%
+                    javascript       - 60%
                     html5            - 90%
                     css3             - 80%
                     ruby             - 40%
@@ -88,10 +88,12 @@ export default {
             fn: () => {
                 return `
                     Cool projects I have worked on.\n---\n
-                    'kanna-chan'                      | 'Discord-Bot'         | 'python'
-                    'wordinal'                        | 'wordle-on-terminal'  | 'javascript'
-                    'weeby.py'                        | 'API-wrapper'         | 'python'
-                    'github-readme-banner-generator'  | 'banner-generator'    | 'javascript'\n---\n
+                    'ashterm'                         | 'terminal portfolio'   | 'javascript'
+                    'octocolor'                       | 'github profile color' | 'javascript'
+                    'kanna-chan'                      | 'Discord-Bot'          | 'python'
+                    'wordinal'                        | 'wordle-on-terminal'   | 'javascript'
+                    'weeby.py'                        | 'API-wrapper'          | 'python'
+                    'gitbanner'                       | 'banner-generator'     | 'javascript'\n---\n
                 `
             }
         },
@@ -101,7 +103,7 @@ export default {
             fn: () => {
                 return `
                     Editor: Visual Studio Code\n
-                    Theme : GitHub Default Theme\n
+                    Theme : Catpuccin\n
                     Font  : Consolas
                 `
             }
