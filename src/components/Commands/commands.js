@@ -36,7 +36,7 @@ export default {
             description: 'Opens my GitHub Profile.',
             usage: 'twitter',
             fn: () => {
-                window.open('https://github.com/asheeeshh', '_blank')
+                window.open('https://github.com/asrvd', '_blank')
                 return "opening github account..."
             }
         },
@@ -112,7 +112,7 @@ export default {
             description: "Opens this website's github repository.",
             usage: 'repo',
             fn: () => {
-                window.open("https://github.com/asheeeshh/AshTerm", '_blank')
+                window.open("https://github.com/asrvd/AshTerm", '_blank')
                 return "opening repository..."
             }
         },
