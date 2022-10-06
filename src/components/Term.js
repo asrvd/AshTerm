@@ -1,29 +1,31 @@
 import Terminal from 'react-console-emulator'
 import commands from '../components/Commands/commands.js'
 import React from 'react'
-import figlet from 'figlet';
+// import figlet from 'figlet';
 import getcat from '../utils/cat'
+import getdog from '../utils/dog'
+import getjoke from '../utils/joke'
 
 export default function Term() {
     const cmds = commands.commands
     const owrs = commands.overwrites
     const terminal = React.createRef()
-    const [prompt, setPrompt] = React.useState('you@/ashterm:~$ ')
-    const [home, sethome] = React.useState('ashterm')
+    const [prompt, setPrompt] = React.useState('you@/abelrogers:~$ ')
+    const [home, sethome] = React.useState('abelrogers')
     const [dir, setdir] = React.useState({
-        'ashterm': []
+        'abelrogers': []
     })
     return (
         <Terminal
             ref={terminal}
             welcomeMessage={[
-                "Welcome to ashterm!",
+                "Welcome to Abel Rogers terminal",
                 "---",
                 "This is a terminal style website made with React.",
                 "---",
                 "Type 'help' to see a list of commands.",
                 "---",
-                "try starting with 'cat' (〜￣▽￣)〜",
+                "try starting with 'dog' or 'joke'",
                 "---",
             ]}
             commands={{
@@ -40,15 +42,35 @@ export default function Term() {
                     fn: async () => {
                         const url = await getcat()
                         terminal.current.pushToStdout("getting a cute cat for you..\n---\n")
-                        terminal.current.pushToStdout(<img src={url} width="500px" height="380px" alt='cat'></img>)
+                        terminal.current.pushToStdout(<img src={url} width="100%" height="100%" alt='cat'></img>)
+                    }
+                },
+                dog: {
+                    description: 'Get a random dog gif',
+                    usage: 'dog',
+                    fn: async () => {
+                        const url = await getdog()
+                        terminal.current.pushToStdout("getting a random dog gif for you..\n---\n")
+                        terminal.current.pushToStdout(<img src={url} width="100%" height="100%" alt='dog'></img>)
+                    }
+                },
+                joke: {
+                    description: 'Get a random developer joke',
+                    usage: 'joke',
+                    fn: async () => {
+                        const joke2 = await getjoke()
+                        terminal.current.pushToStdout("Random Programming joke..\n---\n")
+                        terminal.current.pushToStdout("\n\n" + joke2.setup + "\n\n")
+                        setTimeout(() => terminal.current.pushToStdout("\n\n" + joke2.delivery + "\n\n\n---\n"), 1500)
+                        // terminal.current.pushToStdout("\n---\n")
                     }
                 },
                 cd: {
-                    description: 'Change directory, not really, lol!',
+                    description: 'Change directory, not really!',
                     usage: 'cd <directory>',
                     fn: (...args) => {
                         if (args.length===1 && args[0]==='..') {
-                            if (prompt === 'you@/ashterm:~$ ') {
+                            if (prompt === 'you@/abelrogers:~$ ') {
                                 return 'cannot go up'
                             } else {
                                 setPrompt(prompt.substring(0, prompt.lastIndexOf('/'))+":~$ ")
@@ -72,7 +94,7 @@ export default function Term() {
                     }
                 },
                 ls: {
-                    description: 'List files in the current directory',
+                    description: 'List files in current directory',
                     usage: 'ls',
                     fn: () => {
                         if (dir[home].length === 0) {
@@ -105,8 +127,8 @@ export default function Term() {
                     usage: 'help',
                     fn: () => {
                         return `
-                            ${Object.keys(owrs).map(cmd => `${cmd}${" ".repeat(12-cmd.length)} | ${owrs[cmd].description}${" ".repeat(39-owrs[cmd].description.length)} | ${owrs[cmd].usage}`).join('\n')}
-                            ${Object.keys(cmds).map(cmd => `${cmd}${" ".repeat(12-cmd.length)} | ${cmds[cmd].description}${" ".repeat(39-cmds[cmd].description.length)} | ${cmds[cmd].usage}`).join('\n')}
+                            ${Object.keys(owrs).map(cmd => `${cmd}${" ".repeat(9-cmd.length)} | ${owrs[cmd].description}${" ".repeat(39-owrs[cmd].description.length)}`).join('\n')}
+                            ${Object.keys(cmds).map(cmd => `${cmd}${" ".repeat(9-cmd.length)} | ${cmds[cmd].description}${" ".repeat(39-cmds[cmd].description.length)}`).join('\n')}
                         `
                     }
                 },
